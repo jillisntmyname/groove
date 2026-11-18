@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tampa Bay Live Music & Venue Calendar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Top Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">🎸</div>
+        <div class="brand-text">
+          <h1>Tampa Bay Live Music Calendar</h1>
+          <p>19+ Venues & Local Breweries Across Tampa, Ybor, St. Pete, Dunedin & Clearwater</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search band, artist, genre, stage, or city..."
+            aria-label="Search band or artist"
+          />
+          <button type="button" id="clearSearchBtn" class="clear-search-btn" title="Clear search">✕</button>
+        </div>
+
+        <button type="button" id="exportMonthIcsBtn" class="btn" title="Export filtered month to Apple/Outlook/Google Calendar (.ics)">
+          📅 Export Month (.ics)
+        </button>
+
+        <button type="button" id="refreshLiveBtn" class="btn btn-primary" title="Fetch latest shows from venues & local music aggregators">
+          ↻ Sync All Sources
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Regional & Venue Filter Panel -->
+    <section class="venues-panel" aria-label="Venue Filters">
+      <div class="venues-panel-header">
+        <div class="venues-panel-title">
+          <span>🎛️ Filter Venues & Regions (Click chip to toggle • Click ↗ to open official venue calendar)</span>
+        </div>
+        <div class="venue-filter-actions">
+          <button type="button" id="selectAllVenuesBtn" class="btn btn-sm">All 19 Venues</button>
+          <button type="button" id="selectOriginalVenuesBtn" class="btn btn-sm">My Original 8</button>
+          <button type="button" data-region="Tampa" class="btn btn-sm region-filter-btn">Tampa & Ybor</button>
+          <button type="button" data-region="St. Pete" class="btn btn-sm region-filter-btn">St. Pete</button>
+          <button type="button" data-region="Clearwater" class="btn btn-sm region-filter-btn">Clearwater & Pinellas</button>
+          <button type="button" id="clearVenuesBtn" class="btn btn-sm">Clear All</button>
+        </div>
+      </div>
+
+      <div class="venue-section-label">Original 8 Core Venues</div>
+      <div id="originalVenueChips" class="venue-chips"></div>
+
+      <div class="venue-section-label" style="margin-top: 0.9rem;">Expanded Tampa Bay Live Music Venues & Breweries (+11 More)</div>
+      <div id="expandedVenueChips" class="venue-chips"></div>
+
+      <!-- Regional Live Music Aggregators Bar -->
+      <div class="aggregators-bar">
+        <span class="aggregators-label">📡 Powered by & Linked with Local Music Guides:</span>
+        <div id="aggregatorLinks" class="aggregator-links"></div>
+      </div>
+    </section>
+
+    <!-- Calendar Navigation & View Switcher -->
+    <section class="calendar-toolbar">
+      <div class="month-nav">
+        <button type="button" id="prevMonthBtn" class="btn" aria-label="Previous Month">◀ Prev</button>
+        <h2 id="monthTitle" class="month-title">November 2026</h2>
+        <button type="button" id="nextMonthBtn" class="btn" aria-label="Next Month">Next ▶</button>
+        <button type="button" id="todayBtn" class="btn btn-sm">Today</button>
+      </div>
+
+      <div class="toolbar-right">
+        <div id="statsPill" class="stats-pill"></div>
+        <div class="view-toggle" role="tablist">
+          <button type="button" id="viewCalendarBtn" class="view-btn active" role="tab">Calendar Grid</button>
+          <button type="button" id="viewListBtn" class="view-btn" role="tab">Chronological List</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monthly Calendar Grid View -->
+    <section id="calendarViewWrapper" class="calendar-grid-wrapper">
+      <div class="weekdays-header">
+        <div class="weekday-label">Sun</div>
+        <div class="weekday-label">Mon</div>
+        <div class="weekday-label">Tue</div>
+        <div class="weekday-label">Wed</div>
+        <div class="weekday-label">Thu</div>
+        <div class="weekday-label">Fri</div>
+        <div class="weekday-label">Sat</div>
+      </div>
+      <div id="daysGrid" class="days-grid"></div>
+    </section>
+
+    <!-- Chronological List View -->
+    <section id="listViewWrapper" class="list-view-wrapper"></section>
+  </main>
+
+  <!-- Event Details & Calendar Export Modal -->
+  <div id="eventModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" id="modalCloseBtn" class="modal-close" aria-label="Close modal">✕</button>
+      <div id="modalVenueTag" class="modal-venue-tag"></div>
+      <h3 id="modalTitle" class="modal-title"></h3>
+
+      <div class="modal-meta">
+        <div class="modal-meta-row">
+          <span>🗓️ Date:</span>
+          <strong id="modalDate"></strong>
+        </div>
+        <div class="modal-meta-row">
+          <span>⏰ Time:</span>
+          <strong id="modalTime"></strong>
+        </div>
+        <div class="modal-meta-row">
+          <span>📍 Stage / Room:</span>
+          <strong id="modalStage"></strong>
+        </div>
+        <div class="modal-meta-row">
+          <span>🗺️ Address:</span>
+          <span id="modalAddress"></span>
+        </div>
+      </div>
+
+      <p id="modalDescription" class="modal-description"></p>
+
+      <div class="modal-actions">
+        <a id="modalTicketLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          🎟️ Event / Venue Page ↗
+        </a>
+        <a id="modalGoogleCalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn">
+          ➕ Add to Google Calendar
+        </a>
+        <button type="button" id="modalIcsBtn" class="btn">
+          📥 Download .ics
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="events-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

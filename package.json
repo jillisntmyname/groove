@@ -1,0 +1,10 @@
+{
+  "name": "tampa-bay-music-calendar",
+  "version": "1.0.0",
+  "description": "Tampa Bay Live Music & Venue Events Calendar",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "scrape": "node scraper.js"
+  }
+}
