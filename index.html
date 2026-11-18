@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0e17" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TB Music" />
+  <link rel="manifest" href="manifest.json" />
   <title>Tampa Bay Live Music & Venue Calendar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,44 +18,65 @@
   <!-- Sticky Top Header -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand">
-        <div class="brand-icon">🎸</div>
-        <div class="brand-text">
-          <h1>Tampa Bay Live Music Calendar</h1>
-          <p>19+ Venues & Local Breweries Across Tampa, Ybor, St. Pete, Dunedin & Clearwater</p>
+      <div class="brand-row">
+        <div class="brand">
+          <div class="brand-icon">🎸</div>
+          <div class="brand-text">
+            <h1>Tampa Bay Live Music</h1>
+            <p>19+ Venues • Tampa, Ybor, St. Pete & Clearwater</p>
+          </div>
         </div>
+
+        <!-- Mobile-only Quick Filter Drawer Button -->
+        <button type="button" id="mobileFilterToggleBtn" class="btn btn-sm mobile-only-btn" aria-expanded="false">
+          🎛️ Venues <span id="activeVenueCountBadge" class="badge-pill">19</span>
+        </button>
       </div>
 
       <div class="header-actions">
         <div class="search-wrapper">
           <span class="search-icon">🔍</span>
           <input
-            type="text"
+            type="search"
             id="searchInput"
             class="search-input"
-            placeholder="Search band, artist, genre, stage, or city..."
+            placeholder="Search band, artist, stage, or city..."
             aria-label="Search band or artist"
           />
           <button type="button" id="clearSearchBtn" class="clear-search-btn" title="Clear search">✕</button>
         </div>
 
-        <button type="button" id="exportMonthIcsBtn" class="btn" title="Export filtered month to Apple/Outlook/Google Calendar (.ics)">
-          📅 Export Month (.ics)
-        </button>
+        <div class="desktop-action-btns">
+          <button type="button" id="mobilePreviewToggleBtn" class="btn" title="Preview Phone Layout on Desktop">
+            📱 Phone View
+          </button>
+          <button type="button" id="exportMonthIcsBtn" class="btn" title="Export filtered month to Apple/Outlook/Google Calendar (.ics)">
+            📅 Export (.ics)
+          </button>
+          <button type="button" id="refreshLiveBtn" class="btn btn-primary" title="Fetch latest shows from venues & local music aggregators">
+            ↻ Sync
+          </button>
+        </div>
+      </div>
 
-        <button type="button" id="refreshLiveBtn" class="btn btn-primary" title="Fetch latest shows from venues & local music aggregators">
-          ↻ Sync All Sources
-        </button>
+      <!-- Mobile Quick Region Pills (Horizontal Scroll) -->
+      <div class="mobile-quick-bar">
+        <button type="button" data-quick="all" class="quick-pill active">All Venues</button>
+        <button type="button" data-quick="original" class="quick-pill">★ My Original 8</button>
+        <button type="button" data-quick="tampa" class="quick-pill">Tampa / Ybor</button>
+        <button type="button" data-quick="st. pete" class="quick-pill">St. Pete</button>
+        <button type="button" data-quick="clearwater" class="quick-pill">Clearwater</button>
+        <button type="button" data-quick="free" class="quick-pill">✨ Free Shows</button>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <!-- Regional & Venue Filter Panel -->
-    <section class="venues-panel" aria-label="Venue Filters">
+    <!-- Regional & Venue Filter Panel (Collapsible on Mobile) -->
+    <section id="venuesPanel" class="venues-panel" aria-label="Venue Filters">
       <div class="venues-panel-header">
         <div class="venues-panel-title">
-          <span>🎛️ Filter Venues & Regions (Click chip to toggle • Click ↗ to open official venue calendar)</span>
+          <span>🎛️ Filter Venues & Regions (Tap chip to toggle • Tap ↗ for official venue calendar)</span>
         </div>
         <div class="venue-filter-actions">
           <button type="button" id="selectAllVenuesBtn" class="btn btn-sm">All 19 Venues</button>
@@ -70,7 +96,7 @@
 
       <!-- Regional Live Music Aggregators Bar -->
       <div class="aggregators-bar">
-        <span class="aggregators-label">📡 Powered by & Linked with Local Music Guides:</span>
+        <span class="aggregators-label">📡 Local Music Guides:</span>
         <div id="aggregatorLinks" class="aggregator-links"></div>
       </div>
     </section>
@@ -78,42 +104,70 @@
     <!-- Calendar Navigation & View Switcher -->
     <section class="calendar-toolbar">
       <div class="month-nav">
-        <button type="button" id="prevMonthBtn" class="btn" aria-label="Previous Month">◀ Prev</button>
+        <button type="button" id="prevMonthBtn" class="btn nav-arrow-btn" aria-label="Previous Month">◀</button>
         <h2 id="monthTitle" class="month-title">November 2026</h2>
-        <button type="button" id="nextMonthBtn" class="btn" aria-label="Next Month">Next ▶</button>
+        <button type="button" id="nextMonthBtn" class="btn nav-arrow-btn" aria-label="Next Month">▶</button>
         <button type="button" id="todayBtn" class="btn btn-sm">Today</button>
       </div>
 
       <div class="toolbar-right">
         <div id="statsPill" class="stats-pill"></div>
         <div class="view-toggle" role="tablist">
-          <button type="button" id="viewCalendarBtn" class="view-btn active" role="tab">Calendar Grid</button>
-          <button type="button" id="viewListBtn" class="view-btn" role="tab">Chronological List</button>
+          <button type="button" id="viewCalendarBtn" class="view-btn active" role="tab">📅 Calendar</button>
+          <button type="button" id="viewListBtn" class="view-btn" role="tab">📋 Feed</button>
         </div>
       </div>
     </section>
 
-    <!-- Monthly Calendar Grid View -->
+    <!-- Monthly Calendar Grid View (Desktop full grid + Mobile Compact Dot Calendar with Selected Day Agenda) -->
     <section id="calendarViewWrapper" class="calendar-grid-wrapper">
       <div class="weekdays-header">
-        <div class="weekday-label">Sun</div>
-        <div class="weekday-label">Mon</div>
-        <div class="weekday-label">Tue</div>
-        <div class="weekday-label">Wed</div>
-        <div class="weekday-label">Thu</div>
-        <div class="weekday-label">Fri</div>
-        <div class="weekday-label">Sat</div>
+        <div class="weekday-label"><span class="full-day">Sun</span><span class="short-day">S</span></div>
+        <div class="weekday-label"><span class="full-day">Mon</span><span class="short-day">M</span></div>
+        <div class="weekday-label"><span class="full-day">Tue</span><span class="short-day">T</span></div>
+        <div class="weekday-label"><span class="full-day">Wed</span><span class="short-day">W</span></div>
+        <div class="weekday-label"><span class="full-day">Thu</span><span class="short-day">T</span></div>
+        <div class="weekday-label"><span class="full-day">Fri</span><span class="short-day">F</span></div>
+        <div class="weekday-label"><span class="full-day">Sat</span><span class="short-day">S</span></div>
       </div>
       <div id="daysGrid" class="days-grid"></div>
+
+      <!-- Mobile Selected Day Agenda (Appears below the compact calendar grid on phones) -->
+      <div id="mobileDayAgenda" class="mobile-day-agenda"></div>
     </section>
 
     <!-- Chronological List View -->
     <section id="listViewWrapper" class="list-view-wrapper"></section>
   </main>
 
-  <!-- Event Details & Calendar Export Modal -->
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <button type="button" id="navCalBtn" class="mobile-nav-item active">
+      <span class="nav-icon">📅</span>
+      <span class="nav-label">Calendar</span>
+    </button>
+    <button type="button" id="navListBtn" class="mobile-nav-item">
+      <span class="nav-icon">📋</span>
+      <span class="nav-label">Show Feed</span>
+    </button>
+    <button type="button" id="navTonightBtn" class="mobile-nav-item">
+      <span class="nav-icon">🔥</span>
+      <span class="nav-label">Today</span>
+    </button>
+    <button type="button" id="navVenuesBtn" class="mobile-nav-item">
+      <span class="nav-icon">🎛️</span>
+      <span class="nav-label">Venues</span>
+    </button>
+    <button type="button" id="navExportBtn" class="mobile-nav-item">
+      <span class="nav-icon">📥</span>
+      <span class="nav-label">Export</span>
+    </button>
+  </nav>
+
+  <!-- Event Details & Calendar Export Modal (Bottom Sheet on Mobile) -->
   <div id="eventModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
+      <div class="modal-drag-handle"></div>
       <button type="button" id="modalCloseBtn" class="modal-close" aria-label="Close modal">✕</button>
       <div id="modalVenueTag" class="modal-venue-tag"></div>
       <h3 id="modalTitle" class="modal-title"></h3>
@@ -133,21 +187,26 @@
         </div>
         <div class="modal-meta-row">
           <span>🗺️ Address:</span>
-          <span id="modalAddress"></span>
+          <a id="modalDirectionsLink" href="#" target="_blank" rel="noopener noreferrer" class="directions-link">
+            <span id="modalAddress"></span> ↗
+          </a>
         </div>
       </div>
 
       <p id="modalDescription" class="modal-description"></p>
 
       <div class="modal-actions">
-        <a id="modalTicketLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          🎟️ Event / Venue Page ↗
+        <a id="modalTicketLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary modal-action-main">
+          🎟️ Event / Tickets Page ↗
         </a>
         <a id="modalGoogleCalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn">
-          ➕ Add to Google Calendar
+          ➕ Google Calendar
         </a>
         <button type="button" id="modalIcsBtn" class="btn">
-          📥 Download .ics
+          📥 Apple / Outlook (.ics)
+        </button>
+        <button type="button" id="modalShareBtn" class="btn">
+          📤 Share Show
         </button>
       </div>
     </div>
