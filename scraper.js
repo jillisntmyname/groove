@@ -101,6 +101,49 @@ function extractJsonLdEvents(html, defaultVenue) {
 }
 
 /**
+ * Extracts Popmenu / New World Tampa event cards & links from both Upcoming Events and Calendar views
+ */
+function extractNewWorldPopmenuEvents(html, venue) {
+  const results = [];
+  // Match individual /events/<slug> links rendered in New World Tampa's Popmenu page
+  const cardRegex = /href=["']((?:https?:\/\/(?:www\.)?newworldtampa\.com)?\/events\/([a-z0-9-]+))["'][^>]*>([\s\S]*?)<\/a>/gi;
+  let match;
+  while ((match = cardRegex.exec(html)) !== null) {
+    const fullUrl = match[1].startsWith('http')
+      ? match[1]
+      : `https://www.newworldtampa.com${match[1]}`;
+    const slug = match[2];
+    const innerText = decodeHtml(match[3]);
+    if (!innerText || innerText.length < 3 || slug === 'events') continue;
+
+    // Look for a date pattern near the link or inside the card text
+    const dateMatch = innerText.match(
+      /(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{1,2})(?:,?\s*(\d{4}))?/i
+    );
+    if (dateMatch) {
+      const monthNames = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+      const mIdx = monthNames.indexOf(dateMatch[1].slice(0, 3).toLowerCase());
+      const day = parseInt(dateMatch[2], 10);
+      const year = dateMatch[3] ? parseInt(dateMatch[3], 10) : mIdx >= 9 ? 2026 : 2027;
+      if (mIdx !== -1 && day >= 1 && day <= 31) {
+        const isoDate = `${year}-${String(mIdx + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        results.push({
+          id: `newworld-${isoDate}-${slug.slice(0, 20)}`,
+          title: innerText.replace(/\s+/g, ' ').slice(0, 110),
+          venueId: 'newworld',
+          date: isoDate,
+          time: 'Check Event Page',
+          stage: 'New World Tampa (Music Hall / Biergarten)',
+          description: 'Extracted from New World Tampa Events & Calendar View.',
+          url: fullUrl
+        });
+      }
+    }
+  }
+  return results;
+}
+
+/**
  * Match an aggregator event's location name to one of our 19 Tampa Bay venue IDs
  */
 function matchVenueId(locationName, venues) {
@@ -180,6 +223,9 @@ async function runScraper() {
     const html = await fetchHtml(venue.url, venue.name);
     if (!html) continue;
     const events = extractJsonLdEvents(html, venue);
+    if (venue.id === 'newworld') {
+      events.push(...extractNewWorldPopmenuEvents(html, venue));
+    }
     console.log(`  [+] Extracted ${events.length} structured event(s) from ${venue.name}`);
     for (const ev of events) {
       const key = `${ev.venueId}::${ev.date}::${ev.title.toLowerCase().slice(0, 22)}`;

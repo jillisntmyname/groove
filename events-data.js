@@ -2260,6 +2260,510 @@ window.TAMPA_BAY_EVENTS_DATA = {
       stage: "Amphitheatre",
       description: "Reggae-dub sensation Stick Figure live under the stars.",
       url: "https://www.midfloridaamp.com/shows"
+    },
+
+    // =========================================================================
+    // COMPLETE NEW WORLD TAMPA SCHEDULE (CALENDAR VIEW + UPCOMING + TICKETWEB)
+    // =========================================================================
+    {
+      id: "newworld-2026-11-01",
+      title: "The Sunday Sampler Tampa Music Series feat. The American Song Box Trio",
+      venueId: "newworld",
+      date: "2026-11-01",
+      time: "12:30 PM – 4:00 PM",
+      stage: "New World Tampa",
+      description: "Presented by Will McLean Foundation & WMNF Radio. Advance seat reservation available.",
+      url: "https://www.newworldtampa.com/events/the-sunday-sampler-tampa-music-series-featuring-the-american-song-box-trio"
+    },
+    {
+      id: "newworld-2026-11-03",
+      title: "Taking Back Tampa – Super Smash Bros. Melee Tournament",
+      venueId: "newworld",
+      date: "2026-11-03",
+      time: "6:30 PM – 9:00 PM",
+      stage: "New World Bar",
+      description: "Bi-weekly tournament in the Bar ($5 venue fee / free for first-timers).",
+      url: "https://www.newworldtampa.com/events/taking-back-tampa-a-super-smash-bros-melee-tournament-04a2be06"
+    },
+    {
+      id: "newworld-2026-11-05-1",
+      title: "Dana and Alden w/ Alex Amen",
+      venueId: "newworld",
+      date: "2026-11-05",
+      time: "7:00 PM",
+      stage: "Music Hall (18+)",
+      description: "Paid Ticketed Show ($22 Adv / $25 DOS) via Eventbrite.",
+      url: "https://www.newworldtampa.com/events/dana-and-alden-w-alex-amen"
+    },
+    {
+      id: "newworld-2026-11-05-2",
+      title: "Laugh Lab (Comedy Open Mic) – November & The Tater Tot Union",
+      venueId: "newworld",
+      date: "2026-11-05",
+      time: "4:00 PM & 8:00 PM",
+      stage: "Biergarten & Bar (Free)",
+      description: "Free Tater Tot Union happy hour in the Biergarten (4–7 PM) + Free Laugh Lab Comedy Open Mic in the Bar (8–10 PM).",
+      url: "https://www.newworldtampa.com/events/laugh-lab-comedy-open-mic-november"
+    },
+    {
+      id: "newworld-2026-11-06-1",
+      title: "Automelodi, Glass Chapel, and Guilty By Design (w/ DJ Winters)",
+      venueId: "newworld",
+      date: "2026-11-06",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Paid Music Hall concert ($17 Adv / $20 DOS). Tickets on TicketWeb.",
+      url: "https://www.ticketweb.com/event/automelodi-glass-chapel-guilty-by-new-world-music-hall-tickets/14285314"
+    },
+    {
+      id: "newworld-2026-11-06-2",
+      title: "SG Wood (5 PM Free Biergarten) & Friday Night Jazz: The Nathan Moore Trio (8 PM)",
+      venueId: "newworld",
+      date: "2026-11-06",
+      time: "5:00 PM & 8:00 PM",
+      stage: "Biergarten (Free / Vivenu)",
+      description: "Free acoustic set by SG Wood (5–7 PM) followed by Friday Night Jazz in the Garden featuring The Nathan Moore Trio (8–11 PM).",
+      url: "https://www.newworldtampa.com/events/friday-night-jazz-in-the-garden-feat-the-nathan-moore-trio-30a80c8a"
+    },
+    {
+      id: "newworld-2026-11-07",
+      title: "Parker Barrow",
+      venueId: "newworld",
+      date: "2026-11-07",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • Vivenu)",
+      description: "Southern blues-rock band Parker Barrow live in the Music Hall.",
+      url: "https://www.newworldtampa.com/events/parker-barrow"
+    },
+    {
+      id: "newworld-2026-11-08",
+      title: "Daisychain, Indigo Lane, Zozingbo, and Now In Color",
+      venueId: "newworld",
+      date: "2026-11-08",
+      time: "7:00 PM",
+      stage: "Music Hall (18+)",
+      description: "152 Productions showcase featuring Daisychain, Indigo Lane, Zozingbo, and Now In Color.",
+      url: "https://www.newworldtampa.com/events/daisychain-indigo-lane-zozingbo-and-now-in-color"
+    },
+    {
+      id: "newworld-2026-11-09",
+      title: "Sweet Pill w/ Heart To Gold & Stereosity",
+      venueId: "newworld",
+      date: "2026-11-09",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Paid Music Hall show on TicketWeb featuring emo/math-rock band Sweet Pill.",
+      url: "https://www.ticketweb.com/event/sweet-pill-new-world-music-hall-tickets/14924133"
+    },
+    {
+      id: "newworld-2026-11-10",
+      title: "First To Eleven w/ Special Guest",
+      venueId: "newworld",
+      date: "2026-11-10",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • Eventim)",
+      description: "Rock band First To Eleven live in the Music Hall ($20 Adv / $25 DOS).",
+      url: "https://www.newworldtampa.com/events/first-to-eleven-w-special-guest-tba"
+    },
+    {
+      id: "newworld-2026-11-11",
+      title: "New World Open Mic Night (8 PM Biergarten) & Pints of Science (6 PM Music Hall)",
+      venueId: "newworld",
+      date: "2026-11-11",
+      time: "6:00 PM & 8:00 PM",
+      stage: "Music Hall & Biergarten (Free)",
+      description: "Pints of Science November Edition in the Music Hall (6–9 PM) + Free Open Mic Night with Jon Shea in the Biergarten (8–11 PM).",
+      url: "https://www.newworldtampa.com/events/new-world-open-mic-nights-a6b8e965"
+    },
+    {
+      id: "newworld-2026-11-12-1",
+      title: "Goth Homecoming: Lovesong (The Cure Tribute) & First Wave",
+      venueId: "newworld",
+      date: "2026-11-12",
+      time: "6:30 PM",
+      stage: "Music Hall (18+ • Vivenu)",
+      description: "The Cure tribute Lovesong and new wave tribute First Wave live in the Music Hall.",
+      url: "https://www.newworldtampa.com/events/goth-homecoming-lovesong-the-cure-tribute-and-first-wave"
+    },
+    {
+      id: "newworld-2026-11-12-2",
+      title: "Fil Pate Loops (6 PM Free Biergarten) & The Tater Tot Union (4 PM)",
+      venueId: "newworld",
+      date: "2026-11-12",
+      time: "4:00 PM & 6:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Free live loop-based multi-instrumentalist performance by Fil Pate (6–8 PM) and Tater Tot Union happy hour (4–7 PM).",
+      url: "https://www.newworldtampa.com/events/fil-pate-loops-fa061015"
+    },
+    {
+      id: "newworld-2026-11-13-1",
+      title: "Ghostbells, Veronica and the Dark Particles, Warhors3, and DJ Dave",
+      venueId: "newworld",
+      date: "2026-11-13",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Paid TicketWeb Music Hall show ($15 Adv / $20 DOS).",
+      url: "https://www.ticketweb.com/event/ghostbells-veronica-and-the-dark-new-world-music-hall-tickets/14932663"
+    },
+    {
+      id: "newworld-2026-11-13-2",
+      title: "René Schlegel (5 PM Free) & Friday Night Jazz: The Chaunces Trio (8 PM)",
+      venueId: "newworld",
+      date: "2026-11-13",
+      time: "5:00 PM & 8:00 PM",
+      stage: "Biergarten (Free / Vivenu)",
+      description: "Free Biergarten acoustic show by René Schlegel (5–7 PM) followed by Friday Night Jazz in the Garden featuring The Chaunces Trio (8–11 PM).",
+      url: "https://www.newworldtampa.com/events/friday-night-jazz-in-the-garden-feat-the-chaunces-trio-1ed97bf1"
+    },
+    {
+      id: "newworld-2026-11-14-1",
+      title: "Minka (w/ Local Guests)",
+      venueId: "newworld",
+      date: "2026-11-14",
+      time: "8:00 PM",
+      stage: "Music Hall (18+ • Eventim)",
+      description: "Paid Music Hall concert ($17 Adv / $20 DOS) presented by Glory Days Presents.",
+      url: "https://www.newworldtampa.com/events/minka"
+    },
+    {
+      id: "newworld-2026-11-14-2",
+      title: "Super Saxy Happy Hour with Sam Bips",
+      venueId: "newworld",
+      date: "2026-11-14",
+      time: "5:00 PM – 7:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Free early evening live saxophone happy hour set with Sam Bips.",
+      url: "https://www.newworldtampa.com/events/super-saxy-happy-hour-with-sam-bips-4c9ce779"
+    },
+    {
+      id: "newworld-2026-11-15",
+      title: "Kurt Travis, Mella, Resilia, and More",
+      venueId: "newworld",
+      date: "2026-11-15",
+      time: "6:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Paid TicketWeb Music Hall show ($25 Adv / $30 DOS) starring Kurt Travis, Mella, and Resilia.",
+      url: "https://www.ticketweb.com/event/kurt-travis-mella-resilia-and-new-world-music-hall-tickets/15041533"
+    },
+    {
+      id: "newworld-2026-11-16",
+      title: "Blue and Nickelus F",
+      venueId: "newworld",
+      date: "2026-11-16",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Paid TicketWeb Music Hall show ($20 Adv / $25 DOS) featuring Blue and Nickelus F.",
+      url: "https://www.ticketweb.com/event/blue-and-nickelus-f-in-new-world-music-hall-tickets/14385714"
+    },
+    {
+      id: "newworld-2026-11-17-1",
+      title: "Chrissy Chlapecka w/ Special Guests",
+      venueId: "newworld",
+      date: "2026-11-17",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • Eventbrite)",
+      description: "Pop singer Chrissy Chlapecka live in the Music Hall ($25 Adv).",
+      url: "https://www.newworldtampa.com/events/chrissy-chlapecka-w-special-guests-tba"
+    },
+    {
+      id: "newworld-2026-11-17-2",
+      title: "Chops Jam Session feat. Rod Alnord Quartet (Free Biergarten)",
+      venueId: "newworld",
+      date: "2026-11-17",
+      time: "8:00 PM – 11:00 PM",
+      stage: "Biergarten (Free • All Ages)",
+      description: "Monthly third-Tuesday jazz jam session featuring the Rod Alnord Quartet. No cover!",
+      url: "https://www.newworldtampa.com/events/chops-jam-session-ca9a1aa5"
+    },
+    {
+      id: "newworld-2026-11-18-bingo",
+      title: "GMCTB Presents: Drag Bingo! Hosted by Veronica Foxx",
+      venueId: "newworld",
+      date: "2026-11-18",
+      time: "7:00 PM – 11:00 PM",
+      stage: "Music Hall (18+)",
+      description: "Drag Bingo in the Music Hall (Doors 7 PM, Games 7:30 PM) alongside Wednesday Open Mic Night in the Biergarten (8 PM).",
+      url: "https://www.newworldtampa.com/events/gmctb-presents-drag-bingo-hosted-by-veronica-foxx-22e586b8"
+    },
+    {
+      id: "newworld-2026-11-20-jazz",
+      title: "Friday Night Jazz in the Garden Feat. The Jon Shea Group",
+      venueId: "newworld",
+      date: "2026-11-20",
+      time: "8:00 PM – 11:00 PM",
+      stage: "Biergarten",
+      description: "Live outdoor jazz in the Biergarten featuring The Jon Shea Group (while Ortrotasce, Melody Zenith & Offerings play the Music Hall).",
+      url: "https://www.newworldtampa.com/events/friday-night-jazz-in-the-garden-feat-the-jon-shea-group-f2da2865"
+    },
+    {
+      id: "newworld-2026-11-24-both",
+      title: "Off the Dome Hip Hop DJ & Open Mic (Jon Ditty) + Pokémon Night",
+      venueId: "newworld",
+      date: "2026-11-24",
+      time: "7:00 PM – 11:45 PM",
+      stage: "Biergarten / Bar & Music Hall (Free)",
+      description: "Free Off the Dome Hip-Hop DJ & Open Mic hosted by Jon Ditty (7–10 PM) plus Free Pokémon Night in the Music Hall (7–11:45 PM).",
+      url: "https://www.newworldtampa.com/events/off-the-dome-hip-hop-dj-and-open-mic-68696bbb"
+    },
+    {
+      id: "newworld-2026-11-25-openmic",
+      title: "New World Open Mic Night (Hosted by Jon Shea)",
+      venueId: "newworld",
+      date: "2026-11-25",
+      time: "8:00 PM – 11:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Weekly Wednesday Open Mic Night on the Biergarten stage.",
+      url: "https://www.newworldtampa.com/events/new-world-open-mic-nights-f0668ee1"
+    },
+    {
+      id: "newworld-2026-11-27-biergarten",
+      title: "Sarah Mae Gunn (5 PM Free) & Friday Night Jazz: LaRue Nickelson Trio (8 PM)",
+      venueId: "newworld",
+      date: "2026-11-27",
+      time: "5:00 PM & 8:00 PM",
+      stage: "Biergarten (Free / Vivenu)",
+      description: "Free acoustic set by Sarah Mae Gunn (5–7 PM) followed by Friday Night Jazz in the Garden featuring The LaRue Nickelson Trio (8–11 PM).",
+      url: "https://www.newworldtampa.com/events/friday-night-jazz-in-the-garden-feat-the-larue-nickelson-trio"
+    },
+    {
+      id: "newworld-2026-12-03-laugh",
+      title: "Laugh Lab (Comedy Open Mic) – December & The Tater Tot Union",
+      venueId: "newworld",
+      date: "2026-12-03",
+      time: "4:00 PM & 8:00 PM",
+      stage: "Biergarten & Bar (Free)",
+      description: "Free Tater Tot Union happy hour (4 PM) & Free Laugh Lab comedy open mic in the Bar (8–10 PM).",
+      url: "https://www.newworldtampa.com/events/laugh-lab-comedy-open-mic-december"
+    },
+    {
+      id: "newworld-2026-12-05-kincaid",
+      title: "Daniel Kincaid (Free Biergarten Acoustic Set)",
+      venueId: "newworld",
+      date: "2026-12-05",
+      time: "5:00 PM – 7:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Free early evening live music by Daniel Kincaid in the New World Biergarten.",
+      url: "https://www.newworldtampa.com/events/daniel-kincaid-4f3a6e63"
+    },
+    {
+      id: "newworld-2026-12-06-ihow",
+      title: "In Her Own Words with Rematch",
+      venueId: "newworld",
+      date: "2026-12-06",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Pop-punk band In Her Own Words with Rematch ($20 Adv / $25 DOS on TicketWeb).",
+      url: "https://www.ticketweb.com/event/in-her-own-words-in-new-world-music-hall-tickets/14352344"
+    },
+    {
+      id: "newworld-2026-12-08-pxtn",
+      title: "PXTN, Pilot Jonezz, Just Courtesy, and The Tilt",
+      venueId: "newworld",
+      date: "2026-12-08",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • Vivenu)",
+      description: "Local and regional rock/alt showcase featuring PXTN, Pilot Jonezz, Just Courtesy, and The Tilt.",
+      url: "https://www.newworldtampa.com/events/pxtn-pilot-jonezz-just-courtesy-and-the-tilt"
+    },
+    {
+      id: "newworld-2026-12-09-pints",
+      title: "Pints of Science – December Edition",
+      venueId: "newworld",
+      date: "2026-12-09",
+      time: "6:00 PM – 9:00 PM",
+      stage: "Music Hall (Free w/ RSVP)",
+      description: "Science speakers and pints in the Music Hall (Doors 6 PM / Talks 7 PM).",
+      url: "https://www.newworldtampa.com/events/pints-of-science-december-edition"
+    },
+    {
+      id: "newworld-2026-12-10-filpate",
+      title: "Fil Pate Loops (Free Biergarten Set) & Tater Tot Union",
+      venueId: "newworld",
+      date: "2026-12-10",
+      time: "4:00 PM & 6:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Free instrumental looping performance by Fil Pate in the Biergarten (6–8 PM).",
+      url: "https://www.newworldtampa.com/events/fil-pate-loops-69a44fbe"
+    },
+    {
+      id: "newworld-2026-12-11-all",
+      title: "Frontal Boundary / Protokoll 19 / Blood Rave (Music Hall) • Pamela Jo (5 PM) & Harry Tonchev Jazz Trio (8 PM)",
+      venueId: "newworld",
+      date: "2026-12-11",
+      time: "5:00 PM, 7:00 PM & 8:00 PM",
+      stage: "Music Hall (TicketWeb) & Biergarten (Free)",
+      description: "Triple event night: Free Biergarten acoustic set by Pamela Jo (5–7 PM), Frontal Boundary / Protokoll 19 / Blood Rave in the Music Hall (7 PM, TicketWeb), and Friday Night Jazz w/ The Harry Tonchev Trio in the Biergarten (8–11 PM).",
+      url: "https://www.newworldtampa.com/events/frontal-boundary-protokoll-19-blood-rave"
+    },
+    {
+      id: "newworld-2026-12-12-wirtz",
+      title: "Reverend Billy C. Wirtz (Free Boogie-Woogie Piano Blues Set)",
+      venueId: "newworld",
+      date: "2026-12-12",
+      time: "5:00 PM – 7:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Free live comedy boogie-woogie piano & blues performance by Reverend Billy C. Wirtz in the Biergarten.",
+      url: "https://www.newworldtampa.com/events/reverend-billy-c-wirtz-9d4a6245"
+    },
+    {
+      id: "newworld-2026-12-15-chops",
+      title: "Chops Jam Session (Free Biergarten Jazz Jam)",
+      venueId: "newworld",
+      date: "2026-12-15",
+      time: "8:00 PM – 11:00 PM",
+      stage: "Biergarten (Free • All Ages)",
+      description: "Free live jazz jam in the Biergarten (while Rickshaw Billie's Burger Patrol plays the Music Hall).",
+      url: "https://www.newworldtampa.com/events/chops-jam-session-ead75072"
+    },
+    {
+      id: "newworld-2026-12-18-gracie",
+      title: "Gracie Topp (Free Biergarten Set)",
+      venueId: "newworld",
+      date: "2026-12-18",
+      time: "5:00 PM – 7:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Free Friday evening singer-songwriter performance by Gracie Topp in the Biergarten.",
+      url: "https://www.newworldtampa.com/events/gracie-topp-f7bf34d1"
+    },
+    {
+      id: "newworld-2026-12-19-vision",
+      title: "Vision Crystal & Remedy Tree",
+      venueId: "newworld",
+      date: "2026-12-19",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • Vivenu)",
+      description: "Vision Crystal and acclaimed Florida indie-bluegrass band Remedy Tree live in the Music Hall.",
+      url: "https://www.newworldtampa.com/events/vision-crystal-and-remedy-tree"
+    },
+    {
+      id: "newworld-2026-12-20-prfm",
+      title: "Tampa Bay Punk Rock Flea Market (XMAS Edition)",
+      venueId: "newworld",
+      date: "2026-12-20",
+      time: "12:00 PM – 5:00 PM",
+      stage: "Entire Venue (Free • All Ages)",
+      description: "Free family-friendly holiday Punk Rock Flea Market with live music, vinyl, vintage, and local vendors.",
+      url: "https://www.newworldtampa.com/events/punk-rock-flea-market"
+    },
+    {
+      id: "newworld-2026-12-29-hiphop",
+      title: "Off the Dome Hip Hop DJ & Open Mic (Hosted by Jon Ditty)",
+      venueId: "newworld",
+      date: "2026-12-29",
+      time: "7:00 PM – 10:00 PM",
+      stage: "Biergarten / Bar (Free)",
+      description: "Free monthly live hip-hop DJ & open mic cipher.",
+      url: "https://www.newworldtampa.com/events/off-the-dome-hip-hop-dj-and-open-mic-aba2185f"
+    },
+    {
+      id: "newworld-2027-01-09-all",
+      title: "Dead Bars, Five Hundred Bucks, Tides, The Slow Death & Panthro UK (Music Hall) + Johnnie D. (5 PM Free Biergarten)",
+      venueId: "newworld",
+      date: "2027-01-09",
+      time: "5:00 PM – 11:45 PM",
+      stage: "Music Hall ($20 Vivenu) & Biergarten (Free)",
+      description: "Free acoustic set by Johnnie D. in the Biergarten (5–7 PM) + 6-band punk fest in the Music Hall featuring Dead Bars, Five Hundred Bucks, Tides, The Slow Death, Panthro UK United 13, and Too Many Daves.",
+      url: "https://www.newworldtampa.com/events/dead-bars-five-hundred-bucks-tides-the-slow-death-panthro-uk-united-13-and-too-many-daves"
+    },
+    {
+      id: "newworld-2027-01-13-leather",
+      title: "Leæther Strip, Damascus Knives, & Layne Lyre",
+      venueId: "newworld",
+      date: "2027-01-13",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Danish industrial/EBM legend Leæther Strip with Damascus Knives and Layne Lyre.",
+      url: "https://www.ticketweb.com/event/leather-strip-damascus-knives-layne-new-world-music-hall-tickets/14402844"
+    },
+    {
+      id: "newworld-2027-01-15-modele",
+      title: "Modele, Vazum, The Night Fallen, & DJ LaBellaSandra",
+      venueId: "newworld",
+      date: "2027-01-15",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Deathrock / post-punk / darkwave night ($15 Adv / $20 DOS on TicketWeb).",
+      url: "https://www.newworldtampa.com/events/modele-vazum-and-the-night-fallen"
+    },
+    {
+      id: "newworld-2027-01-16-sgwood",
+      title: "S.G. Wood (Free Biergarten Set before Big D & The Kids Table)",
+      venueId: "newworld",
+      date: "2027-01-16",
+      time: "5:00 PM – 7:00 PM",
+      stage: "Biergarten (Free)",
+      description: "Free Biergarten performance by S.G. Wood from 5–7 PM (listed in New World Upcoming Events view).",
+      url: "https://www.newworldtampa.com/events/s-g-wood-5f9a3741"
+    },
+    {
+      id: "newworld-2027-01-19-chops",
+      title: "Chops Jam Session (Free Biergarten Jazz Jam)",
+      venueId: "newworld",
+      date: "2027-01-19",
+      time: "8:00 PM – 11:00 PM",
+      stage: "Biergarten (Free • All Ages)",
+      description: "Monthly third-Tuesday jazz jam session in the Biergarten.",
+      url: "https://www.newworldtampa.com/events/chops-jam-session-4ebee58e"
+    },
+    {
+      id: "newworld-2027-01-20-that1guy",
+      title: "That 1 Guy",
+      venueId: "newworld",
+      date: "2027-01-20",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "One-man experimental pipe-instrumentalist phenom That 1 Guy live in the Music Hall.",
+      url: "https://www.newworldtampa.com/events/that-1-guy"
+    },
+    {
+      id: "newworld-2027-01-21-all",
+      title: "Adjust The Sails x Thoughts On Bowling & We Hate Rowan (Music Hall) + Jon 'Blackdog' Ridnell (5 PM Free Biergarten)",
+      venueId: "newworld",
+      date: "2027-01-21",
+      time: "5:00 PM & 7:00 PM",
+      stage: "Music Hall (TicketWeb) & Biergarten (Free)",
+      description: "Free Biergarten show by Jon 'Blackdog' Ridnell (5–7 PM) + Adjust The Sails, Thoughts On Bowling, and We Hate Rowan in the Music Hall (7 PM, TicketWeb).",
+      url: "https://www.newworldtampa.com/events/adjust-the-sails-x-thoughts-on-bowling-and-we-hate-rowan"
+    },
+    {
+      id: "newworld-2027-02-11-yf",
+      title: "Youth Fountain",
+      venueId: "newworld",
+      date: "2027-02-11",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Pop-punk / emo project Youth Fountain live at New World Music Hall.",
+      url: "https://www.newworldtampa.com/events"
+    },
+    {
+      id: "newworld-2027-02-12-hf",
+      title: "Hot Freaks",
+      venueId: "newworld",
+      date: "2027-02-12",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Indie pop band Hot Freaks live at New World Music Hall.",
+      url: "https://www.newworldtampa.com/events"
+    },
+    {
+      id: "newworld-2027-02-16-earthtoeve",
+      title: "Earth to Eve – Oversharing on the Internet Tour",
+      venueId: "newworld",
+      date: "2027-02-16",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Endoxa Presents: Earth to Eve in the New World Music Hall.",
+      url: "https://www.newworldtampa.com/events"
+    },
+    {
+      id: "newworld-2027-02-18-branan",
+      title: "Cory Branan",
+      venueId: "newworld",
+      date: "2027-02-18",
+      time: "7:00 PM",
+      stage: "Music Hall (18+ • TicketWeb)",
+      description: "Alt-country / punk singer-songwriter Cory Branan live in the Music Hall.",
+      url: "https://www.newworldtampa.com/events"
     }
   ]
 };
