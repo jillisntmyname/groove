@@ -25,6 +25,11 @@ window.TAMPA_BAY_EVENTS_DATA = {
       name: "UNATION Tampa Bay Stuff To Do",
       url: "https://www.unation.com/fl/tampa/",
       description: "Weekend festivals, brewery live sets & block parties"
+    },
+    {
+      name: "The Orpheum Official Eventbrite Box Office",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255",
+      description: "Primary Eventbrite ticketing feed for The Orpheum Tampa"
     }
   ],
   venues: [
@@ -554,14 +559,44 @@ window.TAMPA_BAY_EVENTS_DATA = {
       url: "https://themahaffey.com/"
     },
     {
+      id: "orpheum-2026-11-14",
+      title: "Pain of Truth w/ Madball",
+      venueId: "orpheum",
+      date: "2026-11-14",
+      time: "6:30 PM",
+      stage: "Main Room (Eventbrite / AXS)",
+      description: "Hardcore powerhouse bill featuring Pain of Truth and NYC hardcore legends Madball.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2026-11-15",
+      title: "Fireworks w/ Initiate",
+      venueId: "orpheum",
+      date: "2026-11-15",
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite)",
+      description: "Detroit punk/emo band Fireworks live at The Orpheum with special guest Initiate.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2026-11-17",
+      title: "George Clanton",
+      venueId: "orpheum",
+      date: "2026-11-17",
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite)",
+      description: "Chillwave / vaporwave electronic artist George Clanton live in concert.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
       id: "orpheum-2026-11-20",
-      title: "Born of Osiris & Miss May I",
+      title: "Born of Osiris & Miss May I w/ Convictions & Downswing",
       venueId: "orpheum",
       date: "2026-11-20",
-      time: "6:30 PM",
-      stage: "Main Room",
-      description: "Heavy metalcore double-header featuring Born of Osiris and Miss May I.",
-      url: "https://www.theorpheum.com/"
+      time: "6:00 PM",
+      stage: "Main Room (Eventbrite / AXS)",
+      description: "Heavy metalcore co-headliner featuring Born of Osiris and Miss May I with Convictions and Downswing.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "newworld-2026-11-20",
@@ -665,13 +700,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-11-21",
-      title: "The Hails",
+      title: "The Hails w/ Cannibal Kids",
       venueId: "orpheum",
       date: "2026-11-21",
       time: "7:00 PM",
-      stage: "Main Room",
-      description: "Florida indie-pop band The Hails live at The Orpheum.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (Brokenmold / Eventbrite)",
+      description: "Florida indie-pop band The Hails live at The Orpheum with special guests Cannibal Kids.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "newworld-2026-11-21",
@@ -865,13 +900,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-11-25",
-      title: "Blitzkid",
+      title: "Blitzkid w/ Boney Fiend",
       venueId: "orpheum",
       date: "2026-11-25",
       time: "7:00 PM",
-      stage: "Main Room",
-      description: "Horror punk band Blitzkid live at The Orpheum.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (Eventbrite)",
+      description: "Horror punk legends Blitzkid live at The Orpheum with special guest Boney Fiend.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "fergs-2026-11-25",
@@ -1279,13 +1314,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-12-05",
-      title: "A Necessary Accident",
+      title: "A Necessary Accident [Vol. 1] (12-Band Florida Indie & Alt Festival)",
       venueId: "orpheum",
       date: "2026-12-05",
-      time: "7:00 PM",
-      stage: "Main Room",
-      description: "A Necessary Accident live at The Orpheum.",
-      url: "https://www.theorpheum.com/"
+      time: "1:00 PM",
+      stage: "Indoor & Outdoor Stages (Eventbrite)",
+      description: "Full-day multi-artist showcase featuring Palova, Discord Theory, Walking Blue, Displace, Mossheads, Maryn Alyse, Anchor, Social Wreckage, Beyond Chaotic, Shy Blossom, Monaco Honey, and Blush.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "rutheckerd-2026-12-05",
@@ -1409,13 +1444,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-12-08",
-      title: "The Casualties",
+      title: "The Casualties (People Over Power Tour) w/ Bullshit Detector",
       venueId: "orpheum",
       date: "2026-12-08",
       time: "7:00 PM",
-      stage: "Main Room",
-      description: "NYC street punk icons The Casualties live at The Orpheum.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (AXS / Eventbrite)",
+      description: "NYC street punk icons The Casualties on the People Over Power Tour with Bullshit Detector.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "straz-2026-12-08",
@@ -1429,13 +1464,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-12-09",
-      title: "Summer Hoop",
+      title: "Summer Hoop ('Self Disrespect' EP Release Show)",
       venueId: "orpheum",
       date: "2026-12-09",
       time: "7:00 PM",
-      stage: "Main Room",
-      description: "Summer Hoop live at The Orpheum.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (AXS / Eventbrite)",
+      description: "Summer Hoop celebrating their 'Self Disrespect' EP release live at The Orpheum.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "localbreweries-2026-12-09",
@@ -1489,13 +1524,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-12-11",
-      title: "Flamingosis",
+      title: "Flamingosis – Bright Moments 10-Year Anniversary Tour",
       venueId: "orpheum",
       date: "2026-12-11",
-      time: "8:00 PM",
-      stage: "Main Room",
-      description: "Electronic funk & soulful groove producer Flamingosis.",
-      url: "https://www.theorpheum.com/"
+      time: "7:00 PM",
+      stage: "Main Room (AXS / Eventbrite)",
+      description: "Electronic funk & soulful groove producer Flamingosis on his Bright Moments 10-Year Anniversary Tour.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "fergs-2026-12-11",
@@ -1549,13 +1584,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-12-12",
-      title: "The Lemon Twigs",
+      title: "The Lemon Twigs w/ The Liquid Sunshine",
       venueId: "orpheum",
       date: "2026-12-12",
-      time: "7:30 PM",
-      stage: "Main Room",
-      description: "Baroque pop/rock brothers The Lemon Twigs live in Tampa.",
-      url: "https://www.theorpheum.com/"
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite / AXS)",
+      description: "Baroque pop/rock brothers The Lemon Twigs live in Tampa with special guests The Liquid Sunshine.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "fergs-2026-12-12",
@@ -1669,13 +1704,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2026-12-18",
-      title: "Bodysnatcher's Christmas Vacation",
+      title: "Bodysnatcher's Christmas Vacation w/ Distant, Implosive Disgorgence, Psycho-Frame & Volatile Ways",
       venueId: "orpheum",
       date: "2026-12-18",
-      time: "6:30 PM",
-      stage: "Main Room",
-      description: "Florida deathcore titans Bodysnatcher host their annual holiday throwdown.",
-      url: "https://www.theorpheum.com/"
+      time: "6:00 PM",
+      stage: "Main Room (AXS / Eventbrite)",
+      description: "Florida deathcore titans Bodysnatcher host their annual holiday throwdown with Distant, Implosive Disgorgence, Psycho-Frame, and Volatile Ways.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "yuengling-2026-12-18",
@@ -1883,13 +1918,23 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2027-01-02",
-      title: "Cold Steel",
+      title: "Cold Steel w/ Bitter Man",
       venueId: "orpheum",
       date: "2027-01-02",
       time: "7:00 PM",
-      stage: "Main Room",
-      description: "Tampa hardcore band Cold Steel kick off the new year.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (Eventbrite / AXS)",
+      description: "Tampa hardcore band Cold Steel kick off the new year with special guests Bitter Man.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2027-01-09",
+      title: "COZY – R&B and Hip-Hop Party",
+      venueId: "orpheum",
+      date: "2027-01-09",
+      time: "8:00 PM",
+      stage: "Main Room (Eventbrite)",
+      description: "All-night R&B and hip-hop party at The Orpheum (Rescheduled date on Eventbrite).",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "ritzybor-2027-01-02",
@@ -1933,13 +1978,23 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2027-01-10",
-      title: "Filth",
+      title: "Filth ('We Did It All for the Glizzy' Tour) w/ Resistor",
       venueId: "orpheum",
       date: "2027-01-10",
       time: "7:00 PM",
-      stage: "Main Room",
-      description: "Heavy downtempo/deathcore band Filth live at The Orpheum.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (Eventbrite / StubHub)",
+      description: "Heavy downtempo/deathcore band Filth live at The Orpheum with special guests Resistor.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2027-01-16",
+      title: "Emo Night Brooklyn",
+      venueId: "orpheum",
+      date: "2027-01-16",
+      time: "9:00 PM",
+      stage: "Main Room (AXS / Eventbrite)",
+      description: "Late-night emo & pop-punk anthem party Emo Night Brooklyn live at The Orpheum.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "newworld-2027-01-10",
@@ -2023,13 +2078,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2027-01-29",
-      title: "Puzzle",
+      title: "Puzzle w/ 3l3d3p",
       venueId: "orpheum",
       date: "2027-01-29",
-      time: "8:00 PM",
-      stage: "Main Room",
-      description: "Fletcher Shears (of The Garden) solo experimental indie-punk project Puzzle.",
-      url: "https://www.theorpheum.com/"
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite / AXS)",
+      description: "Fletcher Shears (of The Garden) solo experimental indie-punk project Puzzle with special guest 3l3d3p.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "jannus-2027-01-29",
@@ -2053,23 +2108,33 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2027-02-02",
-      title: "Caskets",
+      title: "Caskets w/ Nerv & True North",
       venueId: "orpheum",
       date: "2027-02-02",
       time: "7:00 PM",
-      stage: "Main Room",
-      description: "UK post-hardcore band Caskets live at The Orpheum.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (Eventbrite)",
+      description: "UK post-hardcore band Caskets live at The Orpheum with special guests Nerv and True North.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "orpheum-2027-02-03",
-      title: "Pete Yorn",
+      title: "Pete Yorn (25th Anniversary Solo Acoustic Tour)",
       venueId: "orpheum",
       date: "2027-02-03",
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite / VividSeats)",
+      description: "Alternative rock singer-songwriter Pete Yorn celebrating 25 years of 'musicforthemorningafter' in an intimate solo acoustic performance.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2027-02-05",
+      title: "Heated Rivalry Night (18+ Dance Party)",
+      venueId: "orpheum",
+      date: "2027-02-05",
       time: "8:00 PM",
-      stage: "Main Room",
-      description: "Alternative rock singer-songwriter Pete Yorn.",
-      url: "https://www.theorpheum.com/"
+      stage: "Main Room (Eventbrite / SeatGeek)",
+      description: "Themed club & dance party night at The Orpheum (18+).",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "jannus-2027-02-03",
@@ -2123,23 +2188,23 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2027-02-11",
-      title: "Nervosa",
+      title: "Nervosa w/ Embryonic Autopsy",
       venueId: "orpheum",
       date: "2027-02-11",
-      time: "7:00 PM",
-      stage: "Main Room",
-      description: "Thrash metal powerhouses Nervosa.",
-      url: "https://www.theorpheum.com/"
+      time: "6:00 PM",
+      stage: "Main Room (Eventbrite / SeatGeek)",
+      description: "Brazilian thrash metal powerhouses Nervosa live with Embryonic Autopsy.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "orpheum-2027-02-13",
-      title: "Beast in Black",
+      title: "Beast in Black w/ Gloryhammer",
       venueId: "orpheum",
       date: "2027-02-13",
-      time: "7:30 PM",
-      stage: "Main Room",
-      description: "Finnish power metal band Beast in Black.",
-      url: "https://www.theorpheum.com/"
+      time: "7:00 PM",
+      stage: "Main Room (Ticketmaster / SeatGeek)",
+      description: "Finnish power metal band Beast in Black co-headlining with symphonic power metal band Gloryhammer.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "rutheckerd-2027-02-13",
@@ -2162,6 +2227,16 @@ window.TAMPA_BAY_EVENTS_DATA = {
       url: "https://www.rutheckerdhall.com/events"
     },
     {
+      id: "orpheum-2027-02-17",
+      title: "Opal In Sky",
+      venueId: "orpheum",
+      date: "2027-02-17",
+      time: "7:00 PM",
+      stage: "Main Room (AXS / Eventbrite)",
+      description: "Twin-brother melodic metalcore duo Opal In Sky live at The Orpheum.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
       id: "baycare-2027-02-17",
       title: "Roger Waters Presents LEGACY: A Pink Floyd Show",
       venueId: "baycaresound",
@@ -2173,13 +2248,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2027-02-18",
-      title: "The Lemonheads",
+      title: "The Lemonheads (The Love Chant Tour)",
       venueId: "orpheum",
       date: "2027-02-18",
-      time: "8:00 PM",
-      stage: "Main Room",
-      description: "90s alternative rock icons The Lemonheads.",
-      url: "https://www.theorpheum.com/"
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite / JamBase)",
+      description: "90s alternative rock icons The Lemonheads on 'The Love Chant Tour'.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "jannus-2027-02-20",
@@ -2190,6 +2265,16 @@ window.TAMPA_BAY_EVENTS_DATA = {
       stage: "Jannus Courtyard",
       description: "Alt-rock legends Dinosaur Jr. with special guest Starcrawler.",
       url: "https://www.jannuslive.com/"
+    },
+    {
+      id: "orpheum-2027-02-24",
+      title: "Johnnie Guilbert",
+      venueId: "orpheum",
+      date: "2027-02-24",
+      time: "6:00 PM",
+      stage: "Main Room (AXS / SeatGeek)",
+      description: "Emo / alternative singer-songwriter Johnnie Guilbert live at The Orpheum.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "baycare-2027-02-26",
@@ -2213,13 +2298,13 @@ window.TAMPA_BAY_EVENTS_DATA = {
     },
     {
       id: "orpheum-2027-02-27",
-      title: "Boundaries",
+      title: "Boundaries w/ Spite, The Callous Daoboys & Your Spirit Dies",
       venueId: "orpheum",
       date: "2027-02-27",
-      time: "7:00 PM",
-      stage: "Main Room",
-      description: "Metalcore band Boundaries live in Tampa.",
-      url: "https://www.theorpheum.com/"
+      time: "6:00 PM",
+      stage: "Main Room (Eventbrite / AXS)",
+      description: "Stacked heavy bill featuring Boundaries with Spite, The Callous Daoboys, and Your Spirit Dies.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "baycare-2027-02-28",
@@ -2230,6 +2315,56 @@ window.TAMPA_BAY_EVENTS_DATA = {
       stage: "The BayCare Sound",
       description: "Prog-rock icon Alan Parsons accompanied by the Florida Rock Symphony.",
       url: "https://www.rutheckerdhall.com/the-baycare-sound"
+    },
+    {
+      id: "orpheum-2027-03-13",
+      title: "An Evening with VNV Nation",
+      venueId: "orpheum",
+      date: "2027-03-13",
+      time: "8:00 PM",
+      stage: "Main Room (Eventbrite / SeatGeek)",
+      description: "Futurepop / synth-industrial legends VNV Nation perform an extended evening concert at The Orpheum.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2027-03-14",
+      title: "Dying Fetus w/ Cryptopsy & Special Guests",
+      venueId: "orpheum",
+      date: "2027-03-14",
+      time: "7:00 PM",
+      stage: "Main Room (AXS / Eventbrite)",
+      description: "Death metal titans Dying Fetus headline The Orpheum with technical death metal legends Cryptopsy.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2027-03-19",
+      title: "Gabriel Jacoby & Tiger Lewis ('Gutta Child Tour')",
+      venueId: "orpheum",
+      date: "2027-03-19",
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite / JamBase)",
+      description: "Soul/R&B artists Gabriel Jacoby and Tiger Lewis on the Gutta Child Tour.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2027-03-24",
+      title: "Jared Benjamin ('Icarus 2 Close To The Sun' Tour)",
+      venueId: "orpheum",
+      date: "2027-03-24",
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite / StubHub)",
+      description: "Alternative artist Jared Benjamin brings the Icarus 2 Close To The Sun Tour to Tampa.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
+    },
+    {
+      id: "orpheum-2027-04-07",
+      title: "George Clanton – Spring 2027 Tour",
+      venueId: "orpheum",
+      date: "2027-04-07",
+      time: "7:00 PM",
+      stage: "Main Room (Eventbrite / Venunite)",
+      description: "Electronic producer George Clanton returns to The Orpheum.",
+      url: "https://www.eventbrite.com/o/the-orpheum-177101558255"
     },
     {
       id: "midflorida-2027-05-15",

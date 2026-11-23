@@ -144,6 +144,74 @@ function extractNewWorldPopmenuEvents(html, venue) {
 }
 
 /**
+ * Extracts The Orpheum Tampa events from theorpheum.com HTML & Eventbrite Organizer cards
+ */
+function extractOrpheumEvents(html, sourceUrl) {
+  const results = [];
+  // 1. Parse Eventbrite ticket links & surrounding event card blocks on theorpheum.com or eventbrite.com
+  const ebRegex = /href=["'](https?:\/\/(?:www\.)?eventbrite\.com\/e\/([a-z0-9-]+)-tickets-(\d+)[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi;
+  let match;
+  while ((match = ebRegex.exec(html)) !== null) {
+    const ticketUrl = match[1];
+    const slug = match[2];
+    const ticketId = match[3];
+    // Look around the match in the HTML for date and title text
+    const startIdx = Math.max(0, match.index - 450);
+    const endIdx = Math.min(html.length, match.index + 450);
+    const contextText = decodeHtml(html.slice(startIdx, endIdx));
+
+    const dateMatch = contextText.match(
+      /(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+(\d{1,2})(?:,?\s*(\d{4}))?/i
+    );
+    if (dateMatch) {
+      const monthNames = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+      const mIdx = monthNames.indexOf(dateMatch[1].slice(0, 3).toLowerCase());
+      const day = parseInt(dateMatch[2], 10);
+      const year = dateMatch[3] ? parseInt(dateMatch[3], 10) : mIdx >= 10 ? 2026 : 2027;
+      if (mIdx !== -1 && day >= 1 && day <= 31) {
+        const isoDate = `${year}-${String(mIdx + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const timeMatch = contextText.match(/(\d{1,2}:\d{2}\s*(?:AM|PM))/i);
+        const humanTitle = slug
+          .replace(/-at-the-orpheum.*$/i, '')
+          .replace(/-tampa.*$/i, '')
+          .split('-')
+          .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+          .join(' ');
+
+        if (humanTitle.length >= 2) {
+          results.push({
+            id: `orpheum-${isoDate}-${ticketId.slice(-6)}`,
+            title: humanTitle,
+            venueId: 'orpheum',
+            date: isoDate,
+            time: timeMatch ? timeMatch[1].toUpperCase() : '7:00 PM',
+            stage: 'Main Room (Eventbrite)',
+            description: `Live at The Orpheum Tampa (Source: ${sourceUrl}).`,
+            url: ticketUrl
+          });
+        }
+      }
+    }
+  }
+  return results;
+}
+
+const ORPHEUM_TICKETING_FEEDS = [
+  {
+    name: 'The Orpheum Official Eventbrite Organizer',
+    url: 'https://www.eventbrite.com/o/the-orpheum-177101558255'
+  },
+  {
+    name: 'JamBase – The Orpheum Tampa Schedule',
+    url: 'https://www.jambase.com/venue/the-orpheum-tampa'
+  },
+  {
+    name: 'Glory Days Presents – Florida Concert Calendar',
+    url: 'https://glorydayspresents.com/'
+  }
+];
+
+/**
  * Match an aggregator event's location name to one of our 19 Tampa Bay venue IDs
  */
 function matchVenueId(locationName, venues) {
@@ -225,6 +293,21 @@ async function runScraper() {
     const events = extractJsonLdEvents(html, venue);
     if (venue.id === 'newworld') {
       events.push(...extractNewWorldPopmenuEvents(html, venue));
+    }
+    if (venue.id === 'orpheum') {
+      events.push(...extractOrpheumEvents(html, venue.url));
+      // Also scrape The Orpheum's dedicated Eventbrite Organizer page, JamBase venue page, and promoter feeds
+      for (const feed of ORPHEUM_TICKETING_FEEDS) {
+        const feedHtml = await fetchHtml(feed.url, feed.name);
+        if (feedHtml) {
+          const feedJsonLd = extractJsonLdEvents(feedHtml, venue);
+          const feedEb = extractOrpheumEvents(feedHtml, feed.url);
+          console.log(
+            `  [+] Extracted ${feedJsonLd.length + feedEb.length} event(s) from ${feed.name}`
+          );
+          events.push(...feedJsonLd, ...feedEb);
+        }
+      }
     }
     console.log(`  [+] Extracted ${events.length} structured event(s) from ${venue.name}`);
     for (const ev of events) {

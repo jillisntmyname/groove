@@ -1,0 +1,33 @@
+name: Refresh Tampa Bay Venue Events
+
+on:
+  schedule:
+    # Runs every day at 10:00 UTC (5:00 AM EST)
+    - cron: '0 10 * * *'
+  workflow_dispatch: # Allows manual one-click trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Venue Scraper
+        run: node scraper.js
+
+      - name: Commit updated events-data.js
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add events-data.js
+          git diff --staged --quiet || git commit -m "chore: auto-refresh Tampa Bay venue events"
+          git push
