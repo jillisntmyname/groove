@@ -1,5 +1,5 @@
 window.TAMPA_BAY_EVENTS_DATA = {
-  "lastUpdated": "2026-11-24T20:26:43.635Z",
+  "lastUpdated": "2026-11-25T19:40:55.007Z",
   "aggregators": [
     {
       "name": "Creative Loafing Tampa Bay Music Calendar",
@@ -2673,6 +2673,16 @@ window.TAMPA_BAY_EVENTS_DATA = {
       "url": "https://www.strazcenter.org/calendar/"
     },
     {
+      "id": "yuengling-2026-12-07-silvestre-dangond",
+      "title": "Silvestre Dangond",
+      "venueId": "yuengling",
+      "date": "2026-12-07",
+      "time": "8:00 PM",
+      "stage": "Yuengling Center",
+      "description": "Live performance at Yuengling Center.",
+      "url": "https://www.yuenglingcenter.com/event/silvestre-dangond-2026/"
+    },
+    {
       "id": "orpheum-2026-12-08",
       "title": "The Casualties (People Over Power Tour) w/ Bullshit Detector",
       "venueId": "orpheum",
@@ -3211,6 +3221,16 @@ window.TAMPA_BAY_EVENTS_DATA = {
       "stage": "Music Hall (18+ • Vivenu)",
       "description": "Vision Crystal and acclaimed Florida indie-bluegrass band Remedy Tree live in the Music Hall.",
       "url": "https://www.newworldtampa.com/events/vision-crystal-and-remedy-tree"
+    },
+    {
+      "id": "orpheum-2026-12-19-483014",
+      "title": "K Pop Rave Holiday",
+      "venueId": "orpheum",
+      "date": "2026-12-19",
+      "time": "7:00 PM",
+      "stage": "Main Room (Eventbrite)",
+      "description": "Live at The Orpheum Tampa (Source: https://www.theorpheum.com/).",
+      "url": "https://www.eventbrite.com/e/k-pop-rave-holiday-tickets-2005045483014?aff=odwdwdspacecraft"
     },
     {
       "id": "benchmark-2026-12-20",
