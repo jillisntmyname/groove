@@ -1,5 +1,5 @@
 window.TAMPA_BAY_EVENTS_DATA = {
-  "lastUpdated": "2026-11-25T19:40:55.007Z",
+  "lastUpdated": "2026-11-26T19:22:26.374Z",
   "aggregators": [
     {
       "name": "Creative Loafing Tampa Bay Music Calendar",
@@ -3303,6 +3303,16 @@ window.TAMPA_BAY_EVENTS_DATA = {
       "url": "https://casino.hardrock.com/tampa/entertainment"
     },
     {
+      "id": "benchmark-2026-12-27-jim-gaffigan",
+      "title": "Jim Gaffigan",
+      "venueId": "benchmark",
+      "date": "2026-12-27",
+      "time": "7:00 PM",
+      "stage": "Benchmark International Arena",
+      "description": "Live performance at Benchmark International Arena.",
+      "url": "https://www.benchmarkintlarena.com/event/gaffigan-2026/"
+    },
+    {
       "id": "fergs-2026-12-29",
       "title": "Sevendust",
       "venueId": "fergs",
@@ -3381,6 +3391,16 @@ window.TAMPA_BAY_EVENTS_DATA = {
       "stage": "The Ritz Main Room",
       "description": "Melodic dubstep & heavy bass star Wooli live at The Ritz Ybor.",
       "url": "https://theritzybor.com/"
+    },
+    {
+      "id": "orpheum-2027-01-02-841593",
+      "title": "Cold Steel",
+      "venueId": "orpheum",
+      "date": "2027-01-02",
+      "time": "7:00 PM",
+      "stage": "Main Room (Eventbrite)",
+      "description": "Live at The Orpheum Tampa (Source: https://www.theorpheum.com/).",
+      "url": "https://www.eventbrite.com/e/cold-steel-tickets-2002091841593?aff=odwdwdspacecraft"
     },
     {
       "id": "jannus-2027-01-06",
