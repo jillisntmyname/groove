@@ -1,5 +1,5 @@
 window.TAMPA_BAY_EVENTS_DATA = {
-  "lastUpdated": "2026-11-26T19:22:26.374Z",
+  "lastUpdated": "2026-11-27T19:16:42.434Z",
   "aggregators": [
     {
       "name": "Creative Loafing Tampa Bay Music Calendar",
